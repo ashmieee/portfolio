@@ -6,115 +6,185 @@
 <title>Ashmita Gupta | Portfolio</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-body {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: white;
+html{
+  scroll-behavior:smooth;
 }
 
-/* NAV */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 20px;
+body{
+  background:linear-gradient(135deg,#0f172a,#1e3a8a);
+  color:white;
 }
 
-nav a {
-  color: #cbd5f5;
-  text-decoration: none;
+/* NAVBAR */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  padding:20px;
+  position:sticky;
+  top:0;
+  background:rgba(15,23,42,0.9);
+  backdrop-filter:blur(10px);
+  z-index:1000;
 }
 
-nav a:hover {
-  color: #38bdf8;
+nav a{
+  color:#cbd5f5;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#38bdf8;
 }
 
 /* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  flex-wrap: wrap;
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:60px 10%;
+  flex-wrap:wrap;
+  gap:30px;
 }
 
-.header-text {
-  max-width: 60%;
+.header-text{
+  flex:1;
+  min-width:280px;
 }
 
-header h1 {
-  font-size: 3rem;
-  color: #38bdf8;
+header h1{
+  font-size:3.2rem;
+  color:#38bdf8;
 }
 
-header p {
-  margin-top: 10px;
-  color: #cbd5f5;
+header p{
+  margin-top:12px;
+  color:#cbd5f5;
+  font-size:1.1rem;
 }
 
-/* IMAGE */
-.profile-img {
-  width: 180px;
-  height: 220px;
-  border-radius: 20px;
-  object-fit: cover;
-  border: 3px solid #38bdf8;
+/* PROFILE IMAGE */
+.profile-container{
+  flex:1;
+  display:flex;
+  justify-content:center;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 10px 18px;
-  background: #38bdf8;
-  color: black;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
+.profile-img{
+  width:280px;
+  height:350px;
+  object-fit:cover;
+  border-radius:25px;
+  border:4px solid #38bdf8;
+  box-shadow:0 0 25px rgba(56,189,248,0.4);
 }
 
-.btn:hover {
-  background: #0ea5e9;
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  margin-right:12px;
+  padding:12px 22px;
+  background:#38bdf8;
+  color:black;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-/* CARD */
-.card {
-  backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.08);
-  padding: 20px;
-  margin: 20px auto;
-  border-radius: 15px;
-  width: 85%;
+.btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-2px);
+}
+
+/* CARDS */
+.card{
+  backdrop-filter:blur(12px);
+  background:rgba(255,255,255,0.08);
+  padding:25px;
+  margin:20px auto;
+  border-radius:18px;
+  width:85%;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  background:rgba(255,255,255,0.12);
 }
 
 /* SECTION */
-section {
-  margin: 30px 0;
+section{
+  margin:40px 0;
 }
 
-h2 {
-  text-align: center;
-  color: #38bdf8;
-  margin-bottom: 10px;
+h2{
+  text-align:center;
+  color:#38bdf8;
+  margin-bottom:20px;
+  font-size:2rem;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #cbd5f5;
+.card h3{
+  margin-bottom:10px;
+  color:#7dd3fc;
+}
+
+.card p{
+  line-height:1.7;
+  color:#e2e8f0;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:25px;
+  color:#cbd5f5;
+  margin-top:30px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  header{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+
+  .header-text{
+    max-width:100%;
+  }
+
+  header h1{
+    font-size:2.4rem;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+  .profile-img{
+    width:220px;
+    height:280px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <a href="#about">About</a>
   <a href="#certificates">Certificates</a>
@@ -124,147 +194,237 @@ footer {
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- HEADER -->
 <header>
+
   <div class="header-text">
     <h1>Ashmita Gupta</h1>
-    <p>Aspiring Data Scientist | AI-ML Enthusiast</p>
 
-    <a href="Ashmieee_cveee(3).pdf" target="_blank" class="btn">View Resume</a>
-    <a href="Ashmieee_cveee(3).pdf" download class="btn">Download Resume</a>
+    <p>
+      Aspiring Data Scientist | AI-ML Enthusiast
+    </p>
+
+    <!-- RESUME BUTTONS -->
+    <a href="Ashmieee_cveee%20(3).pdf" target="_blank" class="btn">
+      View Resume
+    </a>
+
+    <a href="Ashmieee_cveee%20(3).pdf" download class="btn">
+      Download Resume
+    </a>
   </div>
 
-  <!-- FIXED IMAGE -->
-  <img src="profile photo.jpg" alt="Profile" class="profile-img">
+  <!-- PROFILE PHOTO -->
+  <div class="profile-container">
+    <img src="profile%20photo.jpg" alt="Ashmita Gupta" class="profile-img">
+  </div>
+
 </header>
 
 <!-- ABOUT -->
 <section id="about">
+
   <h2>ABOUT</h2>
+
   <div class="card">
     <p>
-      I am a motivated B.Tech student with strong fundamentals in Data Science, Machine Learning, and Data Analysis. 
-      I have hands-on experience through internships and real-world projects.
+      I am a motivated B.Tech student with strong fundamentals in Data Science,
+      Machine Learning, and Data Analysis.
+
       <br><br>
-      I am a quick learner, problem solver, and passionate about turning data into insights and building impactful solutions.
+
+      I have hands-on experience through internships and real-world projects.
+      I am passionate about solving real-world problems using AI and Data Science.
     </p>
   </div>
+
 </section>
 
 <!-- CERTIFICATES -->
 <section id="certificates">
+
   <h2>Certificates</h2>
 
   <div class="card">
     <p>📜 Certificate 1</p>
-    <a href="https://drive.google.com/file/d/15D1t0Tp31AdiBTX4LOeXLVApbyFnU_EL/view" class="btn">View</a>
+
+    <a href="https://drive.google.com/file/d/15D1t0Tp31AdiBTX4LOeXLVApbyFnU_EL/view"
+       target="_blank"
+       class="btn">
+       View Certificate
+    </a>
   </div>
 
   <div class="card">
     <p>📜 Certificate 2</p>
-    <a href="https://drive.google.com/file/d/1J0923bON8Wj2102K8Rvxty2n9vzt7f4i/view" class="btn">View</a>
+
+    <a href="https://drive.google.com/file/d/1J0923bON8Wj2102K8Rvxty2n9vzt7f4i/view"
+       target="_blank"
+       class="btn">
+       View Certificate
+    </a>
   </div>
 
   <div class="card">
     <p>📜 Certificate 3</p>
-    <a href="https://drive.google.com/file/d/1WQmV_BZz0SBIZSx-RyyyKV0WeN0U24Tb/view" class="btn">View</a>
-  </div>
 
-  <div class="card">
-    <p>📜 Certificate 4</p>
-    <a href="https://drive.google.com/file/d/1kF6lI_jmP3bP0RG6r4L9iusYhj1DJDkx/view" class="btn">View</a>
+    <a href="https://drive.google.com/file/d/1WQmV_BZz0SBIZSx-RyyyKV0WeN0U24Tb/view"
+       target="_blank"
+       class="btn">
+       View Certificate
+    </a>
   </div>
 
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
+
   <h2>Projects</h2>
 
   <div class="card">
     <h3>📊 Mobile Sales AI Analysis</h3>
-    <p>Analyzed dataset using Python and built dashboards.</p>
-    <a href="https://github.com/ashmieee/Mobile-Sales-AI-Analysis" class="btn">View</a>
+
+    <p>
+      Analyzed datasets using Python and created dashboards for
+      business insights and sales prediction.
+    </p>
+
+    <a href="https://github.com/ashmieee/Mobile-Sales-AI-Analysis"
+       target="_blank"
+       class="btn">
+       View Project
+    </a>
   </div>
 
   <div class="card">
     <h3>🌍 Climate Change Modeling</h3>
-    <p>Built predictive model using machine learning.</p>
-    <a href="https://github.com/ashmieee/Climate_Change_Modeling" class="btn">View</a>
+
+    <p>
+      Built predictive machine learning models for climate data analysis.
+    </p>
+
+    <a href="https://github.com/ashmieee/Climate_Change_Modeling"
+       target="_blank"
+       class="btn">
+       View Project
+    </a>
   </div>
 
   <div class="card">
-    <h3>🤖 LexiBot</h3>
-    <p>Built chatbot using ML techniques.</p>
-    <a href="https://github.com/ashmieee/LexiBot" class="btn">View</a>
+    <h3>🤖 LexiBot Chatbot</h3>
+
+    <p>
+      Developed AI chatbot using Generative AI and modern web technologies.
+    </p>
+
+    <a href="https://github.com/ashmieee/LexiBot"
+       target="_blank"
+       class="btn">
+       View Project
+    </a>
   </div>
 
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
+
   <h2>Experience</h2>
 
   <div class="card">
+
     <h3>Machine Learning Intern – MANIT Bhopal</h3>
+
     <p>
-      Intern at Maulana Azad National Institute of Technology (MANIT), Bhopal under the Outreach Internship Program 2025.
-      Worked on machine learning and AI-based concepts with hands-on exposure to real-world applications.
+      Worked on Machine Learning and AI-based concepts with hands-on exposure
+      to real-world applications.
+
       <br><br>
-      Gained experience in data preprocessing, model building, and analytical problem solving.
+
+      Gained experience in data preprocessing, model building,
+      and analytical problem solving.
     </p>
+
   </div>
 
   <div class="card">
-    <h3>AI-ML Virtual Internship (Google for Developers)</h3>
+
+    <h3>AI-ML Virtual Internship</h3>
+
     <p>
-      Successfully completed a 10-week AI-ML Virtual Internship supported by Google for Developers.
+      Successfully completed a 10-week AI-ML Virtual Internship
+      supported by Google for Developers.
+
       <br><br>
-      <b>Core Learning:</b> Machine Learning algorithms, model evaluation, Python implementation.
-      <br>
-      <b>Performance:</b> Achieved Outstanding (Grade-O).
+
+      Learned Machine Learning algorithms, Python implementation,
+      and real-world AI workflows.
     </p>
+
   </div>
 
 </section>
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
+
   <h2>Achievements & Events</h2>
 
   <div class="card">
+
     <h3>ID8NXT Hackathon</h3>
+
     <p>
-      Participated in ID8NXT powered by Bhashini & Microsoft focused on AI and language-tech innovation.
+      Participated in ID8NXT powered by Bhashini & Microsoft focused on
+      AI and language-tech innovation.
     </p>
+
   </div>
 
   <div class="card">
+
     <h3>Avalanche Event</h3>
+
     <p>
-      Attended Avalanche event featuring industry speakers and networking opportunities.
+      Attended Avalanche event featuring industry experts and networking opportunities.
     </p>
+
   </div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
+
   <h2>Contact</h2>
+
   <div class="card">
+
     <p>Email: guptaashmita08@gmail.com</p>
+
     <br>
 
-    <a href="https://www.linkedin.com/in/ashmita08/" class="btn">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/ashmita08/"
+       target="_blank"
+       class="btn">
+       LinkedIn
+    </a>
 
-    <a href="https://github.com/ashmieee" class="btn">GitHub</a>
+    <a href="https://github.com/ashmieee"
+       target="_blank"
+       class="btn">
+       GitHub
+    </a>
+
   </div>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Ashmita Gupta</p>
+  <p>© 2026 Ashmita Gupta | Portfolio</p>
 </footer>
 
 </body>
 </html>
- 
-  
